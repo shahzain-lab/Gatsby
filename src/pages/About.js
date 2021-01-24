@@ -1,19 +1,19 @@
 import React from 'react';
-import { Link, navigate } from 'gatsby';
-import Counter from '../components/counter';
+import { navigate } from 'gatsby';
+import Layout from '../components/Layout';
 
 export default function About(){
     return(
-        <div>
+        <Layout>
+            <div>
             This is About page
             <br />
-            <Counter />
-            <hr/>
             <button onClick={() =>
                navigate('/')
               }>
                 Back to Home
             </button>
-        </div>
+            </div>
+        </Layout>
     )
 }
