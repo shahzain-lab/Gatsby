@@ -17,3 +17,18 @@ exports.createPages = async function ({actions}){
     })
     console.log('the ready final result')
 }
+
+
+
+///////////////////////////////////////////////Client only routes
+
+exports.onCreatePage = async function ({page, actions}){
+    const {createPage} = actions;
+
+    if(page.path.match(/^\/app/)){
+
+        page.matchPath = '/app/*'
+
+        createPage(page)
+    }
+}
